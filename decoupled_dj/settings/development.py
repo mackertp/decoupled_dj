@@ -13,4 +13,9 @@ the django project.
 
 from .base import *
 
+
+# --------------------------------------------------- #
+# add custom dev settings
+# --------------------------------------------------- #
+
 INSTALLED_APPS += ["django_extensions"]

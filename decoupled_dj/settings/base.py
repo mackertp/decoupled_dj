@@ -13,6 +13,7 @@ time comes for deployment.
 # imports
 # --------------------------------------------------- #
 
+import os
 import environ
 from pathlib import Path
 
@@ -42,6 +43,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "users.apps.UsersConfig",
+    "billing.apps.BillingConfig",
+    "rest_framework",
 ]
 
 
@@ -146,6 +149,7 @@ USE_TZ = True
 # --------------------------------------------------- #
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # --------------------------------------------------- #
