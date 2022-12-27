@@ -1,4 +1,4 @@
-# vue SPA
+# Vue - Single Page App
 
 This is an example of a decoupled *Single Page Application* using javascript's vue framework. 
 The application is a simple application to create invoices.

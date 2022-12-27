@@ -10,12 +10,13 @@ application
 # --------------------------------------------------- #
 
 from django.views.generic import TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # --------------------------------------------------- #
 # views
 # --------------------------------------------------- #
 
-class Index(TemplateView):
+class Index(LoginRequiredMixin, TemplateView):
     template_name = "billing/index.html"
 

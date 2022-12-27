@@ -34,6 +34,15 @@ DEBUG = env.bool("DEBUG", False)
 # --------------------------------------------------- #
 # applications
 # --------------------------------------------------- #
+"""
+Two of the applications added here are not currently 
+configured, but they can be used to add additional 
+audit capabilities to our models.
+
+refs:
+https://django-auditlog.readthedocs.io/en/latest/installation.html
+https://django-simple-history.readthedocs.io/en/latest/quick_start.html
+"""
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -44,7 +53,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "users.apps.UsersConfig",
     "billing.apps.BillingConfig",
+    "blog.apps.BlogConfig",
     "rest_framework",
+    "corsheaders",
+    "simple_history",
+    "auditlog",
 ]
 
 
@@ -55,11 +68,13 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "simple_history.middleware.HistoryRequestMiddleware",
 ]
 
 
@@ -165,3 +180,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # --------------------------------------------------- #
 
 AUTH_USER_MODEL = "users.User"
+
+
+# --------------------------------------------------- #
+# setting up the REST Framework settings
+# --------------------------------------------------- #
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.SessionAuthentication",
+    ],
+    # "DEFAULT_PERMISSION_CLASSES": [
+    #    "rest_framework.permissions.IsAdminUser"
+    # ],
+}
