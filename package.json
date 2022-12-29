@@ -1,0 +1,25 @@
+{
+  "name": "decoupled-dj",
+  "version": "1.0.0",
+  "description": "This repository follows along Valentino Gagliardi's Decoupled Django [book](https://www.amazon.com/Decoupled-Django-Valentino-Gagliardi/dp/1484271432), originally published in 2021. You can find his source code [here](https://github.com/valentinogagliardi/decoupled-dj).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mackertp/decoupled_dj.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mackertp/decoupled_dj/issues"
+  },
+  "homepage": "https://github.com/mackertp/decoupled_dj#readme",
+  "devDependencies": {
+    "@vue/cli-service": "^5.0.8",
+    "cypress": "^12.2.0",
+    "vue": "^2.7.14"
+  }
+}

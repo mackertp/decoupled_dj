@@ -1,6 +1,6 @@
 """
-These are the defined views for the billing 
-application
+Sets up an index to link the vue application with 
+a standard Django template view
 
 @author Preston Mackert
 """
