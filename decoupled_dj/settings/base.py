@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "simple_history",
     "auditlog",
+    "login"
 ]
 
 
@@ -194,3 +195,11 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.IsAdminUser"
     ],
 }
+
+
+# --------------------------------------------------- #
+# setup a redirect URL for logging in
+# --------------------------------------------------- #
+
+LOGIN_URL = '/auth/login'
+LOGIN_REDIRECT_URL = "/"

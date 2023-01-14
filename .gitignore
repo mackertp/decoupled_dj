@@ -2,3 +2,4 @@
 *.env
 *migrations
 *node_modules
+*pytest_cache

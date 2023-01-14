@@ -1,13 +1,15 @@
 [tool.poetry]
 name = "decoupled-dj"
 version = "0.1.0"
-description = "Follows Valentino Gagliardi's Decoupled Django"
+description = "A project for studying decoupled django architectures"
 authors = ["Preston Mackert"]
 license = "MIT"
+readme = "README.md"
+packages = [{include = "decoupled_dj"}]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-Django = "^4.1.4"
+python = "^3.8"
+django = "^4.1.4"
 django-environ = "^0.9.0"
 psycopg2-binary = "^2.9.5"
 uvicorn = "^0.20.0"
@@ -19,9 +21,10 @@ pytest = "^7.2.0"
 pytest-django = "^4.5.2"
 model-bakery = "^1.9.0"
 
-[tool.poetry.dev-dependencies]
+
+[tool.poetry.group.dev.dependencies]
 django-extensions = "^3.2.1"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

@@ -18,6 +18,10 @@ from django.conf import settings
 
 urlpatterns = [
     path(
+        "auth/", 
+        include("login.urls", namespace="auth")
+    ),
+    path(
         "billing/",
         include("billing.urls", namespace="billing")
     ),
